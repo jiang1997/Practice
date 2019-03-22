@@ -1,0 +1,13 @@
+//delete duplicate
+char* dup_Rm(char *S) {
+        int length = strlen(S), top = 0, last = -1;
+        char *r = malloc(sizeof(char) * 1000);
+        for(int index = 0; index < length; ++index) {
+                if(last != S[index]) {
+                        r[top++] = S[index];
+                        last = S[index];
+                }
+        }
+        r[top] = 0;
+        return r;
+}
